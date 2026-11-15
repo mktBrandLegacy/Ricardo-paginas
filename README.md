@@ -1,30 +1,14 @@
-# Brand Legacy — App Meta
+# Brand Legacy — App Meta (appmeta.brandlegacy.com.br)
 
-Site estático com as páginas exigidas pela Meta para o app do Facebook/Instagram.
+Cópia da página principal da Imersão Brand Legacy, com as informações legais no final da própria página:
 
-| Página | Caminho |
-|---|---|
-| Início (rodapé com razão social, CNPJ, contato e links) | `/` |
-| Política de Privacidade | `/politica-de-privacidade/` |
-| Exclusão de Dados | `/exclusao-de-dados/` |
-| Termos de Uso | `/termos-de-uso/` |
+- `#politica-de-privacidade` — Política de Privacidade
+- `#exclusao-de-dados` — Exclusão de Dados
+- `#termos-de-uso` — Termos de Uso
 
-## Publicação
+As URLs `/politica-de-privacidade/`, `/exclusao-de-dados/` e `/termos-de-uso/` redirecionam (301) para essas seções (`.htaccess`).
 
-Os links são relativos, então funciona tanto em subdomínio quanto em pasta:
+O rastreamento do site original (Meta Pixel, GTM, Google Analytics e registro de visitas no Supabase) foi desativado nesta cópia; por isso a Política informa que não há cookies de publicidade.
+Se reativar algum, inclua aviso de cookies e atualize a seção 7 da Política.
 
-- **Subdomínio** `https://appmeta.brandlegacy.com.br` → enviar o conteúdo deste repositório para a raiz do subdomínio.
-- **Pasta** `https://brandlegacy.com.br/appmeta/` → enviar o conteúdo para a pasta `appmeta/` do site.
-
-Requisitos da Meta: HTTPS ativo (SSL), acesso sem login, mesmo domínio informado no app.
-
-URLs para cadastrar em developers.facebook.com › App › Configurações › Básico:
-
-- URL da Política de Privacidade: `https://appmeta.brandlegacy.com.br/politica-de-privacidade/`
-- URL dos Termos de Serviço: `https://appmeta.brandlegacy.com.br/termos-de-uso/`
-- URL de instruções de exclusão de dados: `https://appmeta.brandlegacy.com.br/exclusao-de-dados/`
-- Domínio do app: `appmeta.brandlegacy.com.br`
-
-## Cookies
-
-O site não usa Pixel nem Analytics, por isso não tem aviso de cookies. Se for adicionar algum, inclua um banner de consentimento e atualize a seção 7 da Política de Privacidade.
+Publicação: Hostinger › subdomínio `appmeta`, deploy por Git do branch `claude/relaxed-curie-giofyv`.

@@ -1,4 +1,14 @@
 Options -Indexes
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# URLs das páginas legais levam às seções no final da página inicial
+RewriteRule ^politica-de-privacidade/?$ /#politica-de-privacidade [NE,R=301,L]
+RewriteRule ^exclusao-de-dados/?$ /#exclusao-de-dados [NE,R=301,L]
+RewriteRule ^termos-de-uso/?$ /#termos-de-uso [NE,R=301,L]
+</IfModule>
+
 RedirectMatch 404 /\.git
 <FilesMatch "^(README\.md|\.gitignore)$">
 Require all denied
