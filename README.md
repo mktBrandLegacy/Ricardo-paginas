@@ -13,9 +13,7 @@ Site estático com as páginas exigidas pela Meta para o app do Facebook/Instagr
 
 Substitua em todos os arquivos `.html`:
 
-- `[RAZÃO SOCIAL]` → razão social da empresa
 - `[CNPJ]` → CNPJ (ex.: 00.000.000/0001-00)
-- `[CIDADE/UF]` → cidade do foro (Termos de Uso)
 
 ```bash
 grep -rl '\[CNPJ\]' --include=*.html . | xargs sed -i 's#\[CNPJ\]#00.000.000/0001-00#g'
