@@ -9,16 +9,6 @@ Site estático com as páginas exigidas pela Meta para o app do Facebook/Instagr
 | Exclusão de Dados | `/exclusao-de-dados/` |
 | Termos de Uso | `/termos-de-uso/` |
 
-## Antes de publicar: preencher os dados
-
-Substitua em todos os arquivos `.html`:
-
-- `[CNPJ]` → CNPJ (ex.: 00.000.000/0001-00)
-
-```bash
-grep -rl '\[CNPJ\]' --include=*.html . | xargs sed -i 's#\[CNPJ\]#00.000.000/0001-00#g'
-```
-
 ## Publicação
 
 Os links são relativos, então funciona tanto em subdomínio quanto em pasta:
